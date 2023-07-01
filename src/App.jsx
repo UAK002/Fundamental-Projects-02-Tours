@@ -39,7 +39,25 @@ const App = () => {
       </main>
     );
   }
+
   // TO DO
+  if (tours.length === 0) {
+    return (
+      <main>
+        <div className="title">
+          <h2>no tours left</h2>
+          <button
+            type="button"
+            className="btn"
+            style={{ marginTop: '2 rem' }}
+            onClick={() => fetchTours()}
+          >
+            refresh
+          </button>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main>
